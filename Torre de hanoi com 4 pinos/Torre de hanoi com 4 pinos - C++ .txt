@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+void Hanoi4(int n, char orig, char des, char aux1, char aux2){
+    if(n==0){
+        return;
+    }
+    if(n==1){
+        cout<< "Mover disco "<< n << " de " << orig << " para "<< des<<endl;
+    }else{//    0    A     B     C    D
+        Hanoi4(n-2, orig, aux1, aux2, des);
+        //                        1                A                     C
+        cout<< "Mover disco " << n-1 << " de " << orig << " para " << aux2 << endl;
+                        //         2               A                    D
+        cout<< "Mover disco " <<  n  << " de " << orig << " para " <<  des << endl; 
+        //                        1                 C                   D
+        cout<< "Mover disco " << n-1 << " de " << aux2 << " para " <<  des << endl;
+        //      0    B     D     A    C
+        Hanoi4(n-2, aux1, des, orig, aux2);
+
+    }
+}
+
+int main(){
+    int discos = 0;
+    cout<< "Número de disco: ";
+    cin>> discos;
+    
+    Hanoi4(discos, 'A', 'D','B', 'C');
+}

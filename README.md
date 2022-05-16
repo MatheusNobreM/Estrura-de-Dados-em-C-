@@ -1,2 +1,2 @@
-# Estrura-de-Dados-ORDENA-O
+# Estrura-de-Dados-ORDENACAO
 CADEIRA DE ED

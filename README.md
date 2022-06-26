@@ -1,2 +1,2 @@
-# Estrura-de-Dados-ORDENACAO
+# Estrura-de-Dados-em-C++
 CADEIRA DE ED
